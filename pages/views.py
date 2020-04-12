@@ -1,0 +1,9 @@
+from django.shortcuts import render
+
+
+def login_0(request):
+    return render(request, "login_0.html", {})
+
+
+def login_1(request):
+    return render(request, "login_1.html", {})
