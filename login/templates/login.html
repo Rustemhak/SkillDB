@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+</head>
+<body>
+{% block content %}
+    <div class="general-container">
+        <div class="columns">
+            <div class="column is-offset-2 is-8">
+                <form id="login" action="{% url 'login' %}" method="POST" class="text-center">
+                    {% csrf_token %}
+                        <label for="{{ form.username.id_for_label }}" class="label">
+                            Email address
+                        </label>
+                        <div class="form-group">
+                            <label>
+                       {{ form.username|add_class:"form-control"| attr:"placeholder:name@stud.kpfu.ru"| append_attr:"type:email"}}
+                                </label>
+                        </div>
+
+                    <div class="form-group">
+                        <label for="{{ form.password.id_for_label }}" class="label">
+                            Password
+                        </label>
+                        <div class="form-group">
+                            <label>
+                            {{ form.password|add_class:"form-control"|attr:"placeholder:Input password"|append_attr:"type:password"}}
+                                </label>
+                        </div>
+                            {% if form.errors %}
+                                <p>Please enter the correct username and password.<br>
+                                    Note that both fields may be case sensitive.
+                                </p>
+                            {% endif %}
+                        <div class="control">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>
