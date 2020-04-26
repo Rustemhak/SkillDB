@@ -2,20 +2,20 @@ from django import forms
 from django.contrib.auth.forms import UsernameField, AuthenticationForm
 from django.utils.translation import gettext, gettext_lazy as _
 
-
-# не исрользуется, все на встроенном
+# переопределил можно настраивать
 class LoginForm(AuthenticationForm):
-    username = UsernameField(
-        max_length=50,
+    def __init__(self, *args, **kwargs):
+        super(LoginForm, self).__init__(*args, **kwargs)
+
+    username = forms.EmailField(
+        max_length=254,
     )
     password = forms.CharField(
         max_length=60,
         min_length=6,
         widget=forms.PasswordInput(attrs={'autocomplete': 'current-password'}),
     )
-    email = forms.EmailField(
-        max_length=254,
-    )
+
     error_messages = {
         'invalid_login': _(
             "Please enter a correct %(username)s and password. Note that both "
