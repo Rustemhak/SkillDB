@@ -1,0 +1,162 @@
+.cont {
+    background: #0085EB;
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    background: #0085EB;
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+.mainText {
+    position: fixed;
+    width: 486px;
+    height: 67px;
+    left: 78px;
+    top: 10%;
+
+    font-family: Intro Regular, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 72px;
+    display: flex;
+    align-items: flex-end;
+
+    color: #F9F8F8;
+}
+
+.mainButton {
+    width: 300px;
+    height: 21px;
+    font-family: Intro Regular, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: flex-end;
+    color: #F9F8F8;
+}
+
+
+.text_tickets {
+    position: absolute;
+    font-family: Intro Bold, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+
+    color: #F9F8F8;
+}
+
+
+.text_buttons {
+    position: absolute;
+    width: 143px;
+    height: 24px;
+
+    font-family: Intro Bold, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+
+    color: #339DEF;
+}
+
+.text_info {
+    position: absolute;
+    width: 130px;
+    height: 33px;
+
+    font-family: Intro Bold, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+
+    color: #F9F8F8;
+}
+
+.button_tickets {
+    position: absolute;
+    width: 2000px;
+    height: 500px;
+    background: #F9F8F8;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.door {
+    position: fixed;
+    width: 300px;
+    height: 41px;
+    left: 155px;
+    top: 495px;
+}
+
+.right {
+    background: #0085EB;
+    padding-top: 1%;
+    float: right;
+    width: 60%;
+    height: 100%;
+}
+
+.whitePlace {
+    background: #F9F8F8;
+    right: 100px;
+    border-radius: 50px 50px 0 0;
+    width: 70%;
+    height: 100%;
+}
+
+.ticket {
+    position: absolute;
+    width: 520px;
+    height: 270px;
+}
+
+.scroll {
+    width: 150px;
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+/*  полоса прокрутки (скроллбар)*/
+::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+    background-color: #F9F8F8;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0085EB;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #F9F8F8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #253861;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,110 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+<title>Мероприятия</title>
+
+<div class="menu">
+    <h2 class="mainText">SkillDB</h2>
+    <a href="" type="button" class="mainButton" style="  position: fixed;
+    left: 80px;
+    top: 200px;">Профиль</a>
+    <a href="" type="button" class="mainButton" style=" position: fixed;
+    left: 80px;
+    top: 240px;">Мероприятия</a>
+    <a href="" type="button" class="mainButton" style="position: fixed;
+    left: 80px;
+    top: 280px;">Организаторы</a>
+    <a href="" type="button" class="mainButton" style="  position: fixed;
+    left: 80px;
+    top: 440px;">О разработчиках</a>
+    <a href="" type="button" class="mainButton" style="  position: fixed;
+    left: 80px;
+    top: 480px;">Выйти</a>
+    <a href=""
+       class="door" style="position: fixed;
+    width: 300px;
+    height: 41px;
+    left: 155px;
+    top: 475px;">
+        <img src="{% static 'image/door.png' %}" alt=" ">
+    </a>
+</div>
+
+<div class="cont">
+    <div class="right">
+        <div class="whitePlace">
+            <!--ticket sport-->
+            <div style="
+                    position: absolute;
+                    width: 520px;
+                    height: 270px;
+                    left: 647px;
+                    top: 139px;
+                    background: url({% static 'image/ticket_sport.png' %});
+                    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 20px;">
+            </div>
+            <h3 class="text_tickets" style="
+                               width: 255px;
+                               height: 48px;
+                               left: 692px;
+                               top: 215px;">
+                Соревнования <br> по мини-футболу
+            </h3>
+            <!--button-->
+            <a class="btn btn-primary" role="button" style="
+                position: absolute;
+                width: 200px;
+                height: 50px;
+                left: 692px;
+                top: 328px;
+                background: #F9F8F8;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;">
+                <h6 class="text_buttons" style="
+                        left: 28px;
+                        top: 13px;">Участвовать</h6></a>
+            <a href="event_info.html" type="button" class="text_info" style="
+                left: 969px;
+                top: 334px;">Подробнее</a>
+            <!--emoji for tickets-->
+            <div style="
+                    position: absolute;
+                    width: 120px;
+                    height: 117.65px;
+                    left: 979px;
+                    top: 180px;
+                    background: url({% static 'image/emoji_football.png' %});"></div>
+            <!--search-->
+            <form class="form-search">
+                <input placeholder=" Нажмите здесь, чтобы начать поиск... " type="text"
+                       class="input-medium search-query" style="
+                    position: absolute;
+                    width: 520px;
+                    height: 45px;
+                    left: 646px;
+                    top: 60px;
+                    background: rgba(89, 89, 89, 0.1);
+                    border-radius: 10px;">
+                <a href="" style="
+                            position: absolute;
+                            width: 28.03px;
+                            height: 35px;
+                            left: 1118px;
+                            top: 63px;">
+                    <img src="{% static 'image/icons_search.png' %}" alt=" ">
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function click1() {
+        window.location = "event_info.html"
+    }
+</script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
