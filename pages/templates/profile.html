@@ -1,331 +1,323 @@
 {% extends "base_profile.html" %}
+{% load static %}
 {% block page_content %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="font-family: Intro Regular, sans-serif;
+                                                            font-style: normal;
+                                                            font-weight: normal;
+                                                            font-size: 20px;
+                                                            line-height: 20px;
+                                                            display: flex;
+                                                            align-items: flex-end;"">Добавление навыков</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6 style="
+                                             font-family: Intro Regular, sans-serif;
+                                                            font-style: normal;
+                                                            font-weight: normal;
+                                                            font-size: 20px;
+                                                            line-height: 20px;
+                                                            display: flex;
+                                                            align-items: flex-end;">Спорт</h6>
+                    <div style="float: left; height: 160px; width: 50%; overflow-y:scroll">
+                        <input type="checkbox" class="sa" value="sp1">академическая гребля<br><br>
+                        <input type="checkbox" class="sa" value="sp2">бадминтон<br><br>
+                        <input type="checkbox" class="sa" value="sp3">баскетбол<br><br>
+                        <input type="checkbox" class="sa" value="sp4">биатлон<br><br>
+                        <input type="checkbox" class="sa" value="sp5">водное поло<br><br>
+                        <input type="checkbox" class="sa" value="sp6">волейбол<br><br>
+                        <input type="checkbox" class="sa" value="sp7">единоборства<br><br>
+                        <input type="checkbox" class="sa" value="sp8">киберспорт<br><br>
+                        <input type="checkbox" class="sa" value="sp9">легкая атлетика<br><br>
+                        <input type="checkbox" class="sa" value="sp10">мини-футбол<br><br>
+                        <input type="checkbox" class="sa" value="sp11">настольный теннис<br><br>
+                        <input type="checkbox" class="sa" value="sp12">плавание<br><br>
+                        <input type="checkbox" class="sa" value="sp13">спортивная гимнастика<br><br>
+                        <input type="checkbox" class="sa" value="sp14">теннис<br><br>
+                        <input type="checkbox" class="sa" value="sp15">тяжелая атлетика<br><br>
+                        <input type="checkbox" class="sa" value="sp16">другое<br><br>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="form-group attachments">
+                        <h6 class="addPh">При необходимости прикрепите изображение
+                        </h6>
+                        <br>
+                        <div class="alert alert-warning d-none mb1"><small
+                                class="attachments-error"></small></div>
+                        <div class="custom-file">
+                            <input type="file" name="attachment[]" class="custom-file-input"
+                                   id="customFile1">
+                            <label class="custom-file-label" for="customFile1" style="
+                                                            float: left;
+                                                        font-family: Intro Regular, sans-serif;
+                                                        font-style: normal;
+                                                        font-weight: normal;
+                                                        font-size: 15px;
+                                                        line-height: 15px;
+                                                        display: flex;
+                                                        align-items: flex-end;">Выберите
+                                файл...</label>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+
+                    <h6 style="
+                                                        font-family: Intro Regular, sans-serif;
+                                                        font-style: normal;
+                                                        font-weight: normal;
+                                                        font-size: 20px;
+                                                        line-height: 20px;
+                                                        display: flex;
+                                                        align-items: flex-end;">Творчество</h6>
+                    <div style="float: left; height: 85px; width: 300px; overflow-y: scroll">
+                        <form actio="#" id="auth" method="post">
+                            <input type="checkbox" class="sa" form="auth" value="art1">танцы<br><br>
+                            <input type="checkbox" class="sa" form="auth" value="art2">рисование<br><br>
+                            <input type="checkbox" class="sa" value="art3">пение<br><br>
+                            <input type="checkbox" class="sa" value="art4">игра на музыкальных
+                            инструментах<br><br>
+                            <input type="checkbox" class="sa" value="art5">сценическая речь<br><br>
+                            <input type="checkbox" class="sa" value="art6">фотография<br><br>
+                            <input type="checkbox" class="sa" value="art7">другое<br><br>
+                        </form>
+                    </div>
+
+                    <div class="form-group attachments">
+                        <h6 class="addPh">При необходимости прикрепите изображение
+                        </h6>
+                        <br>
+                        <div class="alert alert-warning d-none mb1"><small
+                                class="attachments-error"></small></div>
+                        <div class="custom-file">
+                            <input type="file" name="attachment[]" class="custom-file-input"
+                                   id="customFile1">
+                            <label class="custom-file-label" for="customFile1" style="
+                                                            float: left;
+                                                        font-family: Intro Regular, sans-serif;
+                                                        font-style: normal;
+                                                        font-weight: normal;
+                                                        font-size: 15px;
+                                                        line-height: 15px;
+                                                        display: flex;
+                                                        align-items: flex-end;">Выберите
+                                файл...</label>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="
+                            float: left;
+                            font-family: Intro Regular, sans-serif;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 15px;
+                            line-height: 15px;
+                            display: flex;
+                            align-items: flex-end;"
+                    >Закрыть
+                    </button>
+                    <button type="button" class="btn btn-primary" style="
+                                                            float: left;
+                                                        font-family: Intro Regular, sans-serif;
+                                                        font-style: normal;
+                                                        font-weight: normal;
+                                                        font-size: 15px;
+                                                        line-height: 15px;
+                                                        display: flex;
+                                                        align-items: flex-end;">Сохранить изменения
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="cont" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
          xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
          xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
         <div class="right">
             <div class="whitePlace">
-                <img src="../static/img/image.png" alt="" style=" position: fixed;
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                left: 55%;
-                top: 7%">
-                <h6 style="position: fixed;
-                width: 350px;
-                height: 20px;
-                left: 46.5%;
-                top: 210px;
-                font-family: Intro Bold,sans-serif;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 20px;
-                line-height: 20px;
-                text-align: center;
-                color: #595959;">Иванова Мария</h6>
+                <div class="img0">
+{#                                        <img src="../static/img/image.png" class="profImg" alt="">#}
+                </div>
+                <div class="namePlace">
+                    <h6 class="name">Иванова Мария</h6>
+                </div>
+                <div class="groupPlace">
+                    <h6 class="group">11-905</h6>
+                </div>
 
-                <h6 style="position: fixed;
-                width: 350px;
-                height: 20px;
-                left: 46.5%;
-                top: 240px;
-                font-family: Intro Bold,sans-serif;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 15px;
-                line-height: 15px;
-                text-align: center;
-                color: #595959;">11-905</h6>
-
-                <div style="
-                   z-index:1;
-                   position: fixed;
-                width: 350px;
-                height: 120px;
-                left: 46.5%;
-                top: 280px;
-                background: #F9F8F8;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-                border-radius: 20px">
-                    <div class="col-1-2">
-                        <h6 style="
-                                z-index: 2;
-                                width: 110px;
-                                height: 30px;
-                                left: 15px;
-                                font-family: Intro Bold,sans-serif;
-                                font-style: normal;
-                                font-weight: bold;
-                                font-size: 15px;
-                                line-height: 15px;
-                                {#display: flex;#}
-                                {#align-items: flex-end;#}
-                                text-align: right;
-                                color: #595959;"><br>Мои навыки:</h6>
-                    </div>
-                    <a href="javascript:PopUpShow()"
-                       style="position: fixed; float: right; width: 160px; height: 23px;padding: 11px ">
-                        <svg class="bi bi-plus" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-                             xmlns="http://www.w3.org/2000/svg" style="color: #595959; float:right;">
-                            <path fill-rule="evenodd"
-                                  d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H4a.5.5 0 010-1h3.5V4a.5.5 0 01.5-.5z"
-                                  clip-rule="evenodd"/>
-                            <path fill-rule="evenodd" d="M7.5 8a.5.5 0 01.5-.5h4a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V8z"
-                                  clip-rule="evenodd"/>
-                        </svg>
-                    </a>
-                    <div clas="skillCont" style=" z-index:1;
-                   position: fixed;
-                width: 319px;
-                height: 55px;
-                left: 47.5%;
-                top: 315px;
-                background: #F9F8F8;
-                 font-family: Intro Bold,sans-serif;
-                                font-style: normal;
-                                font-weight: bold;
-                                font-size: 12px;
-                                line-height: 12px;
-
-                                text-align: center;
-                                color: #595959;">
-                        <div class="b-popup" id="popup1">
-                            <div class="b-popup-content">
-                                <h6 style="
-                                    font-family: Intro Regular, sans-serif;
-                                    font-style: normal;
-                                    font-weight: normal;
-                                    font-size: 20px;
-                                    line-height: 20px;
-                                    display: flex;
-                                    align-items: flex-end;">Спорт</h6>
-                                <div style="float: left; height: 85px; width: 300px; overflow: auto">
-                                    <input type="checkbox" class="sa" value="sp1">академическая гребля<br><br>
-                                    <input type="checkbox" class="sa" value="sp2">бадминтон<br><br>
-                                    <input type="checkbox" class="sa" value="sp3">баскетбол<br><br>
-                                    <input type="checkbox" class="sa" value="sp4">биатлон<br><br>
-                                    <input type="checkbox" class="sa" value="sp5">водное поло<br><br>
-                                    <input type="checkbox" class="sa" value="sp6">волейбол<br><br>
-                                    <input type="checkbox" class="sa" value="sp7">единоборства<br><br>
-                                    <input type="checkbox" class="sa" value="sp8">киберспорт<br><br>
-                                    <input type="checkbox" class="sa" value="sp9">легкая атлетика<br><br>
-                                    <input type="checkbox" class="sa" value="sp10">мини-футбол<br><br>
-                                    <input type="checkbox" class="sa" value="sp11">настольный теннис<br><br>
-                                    <input type="checkbox" class="sa" value="sp12">плавание<br><br>
-                                    <input type="checkbox" class="sa" value="sp13">спортивная гимнастика<br><br>
-                                    <input type="checkbox" class="sa" value="sp14">теннис<br><br>
-                                    <input type="checkbox" class="sa" value="sp15">тяжелая атлетика<br><br>
-                                    <input type="checkbox" class="sa" value="sp16">другое<br><br>
-                                </div>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <div class="form-group attachments">
-                                    <h6 style="
-                                    float: left;
-                                font-family: Intro Regular, sans-serif;
-                                font-style: normal;
-                                font-weight: normal;
-                                font-size: 15px;
-                                line-height: 15px;
-                                display: flex;
-                                align-items: flex-end;">При необходимости прикрепите изображение
-                                    </h6>
-                                    <br>
-                                    <div class="alert alert-warning d-none mb1"><small
-                                            class="attachments-error"></small></div>
-                                    <div class="custom-file">
-                                        <input type="file" name="attachment[]" class="custom-file-input"
-                                               id="customFile1">
-                                        <label class="custom-file-label" for="customFile1" style="
-                                    float: left;
-                                font-family: Intro Regular, sans-serif;
-                                font-style: normal;
-                                font-weight: normal;
-                                font-size: 15px;
-                                line-height: 15px;
-                                display: flex;
-                                align-items: flex-end;">Выберите
-                                            файл...</label>
-                                        <div class="invalid-feedback"></div>
-                                    </div>
-                                </div>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <h6 style="
-                                font-family: Intro Regular, sans-serif;
-                                font-style: normal;
-                                font-weight: normal;
-                                font-size: 20px;
-                                line-height: 20px;
-                                display: flex;
-                                align-items: flex-end;">Творчество</h6>
-                                <div style="float: left; height: 85px; width: 300px; overflow-y: scroll">
-                                    <form actio="#" id="auth" method="post">
-                                        <input type="checkbox" class="sa" form="auth" value="art1">танцы<br><br>
-                                        <input type="checkbox" class="sa" form="auth" value="art2">рисование<br><br>
-                                        <input type="checkbox" class="sa" value="art3">пение<br><br>
-                                        <input type="checkbox" class="sa" value="art4">игра на музыкальных
-                                        инструментах<br><br>
-                                        <input type="checkbox" class="sa" value="art5">сценическая речь<br><br>
-                                        <input type="checkbox" class="sa" value="art6">фотография<br><br>
-                                        <input type="checkbox" class="sa" value="art7">другое<br><br>
-                                    </form>
-                                </div>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <div class="form-group attachments">
-                                    <h6 style="
-                                    float: left;
-                                font-family: Intro Regular, sans-serif;
-                                font-style: normal;
-                                font-weight: normal;
-                                font-size: 15px;
-                                line-height: 15px;
-                                display: flex;
-                                align-items: flex-end;">При необходимости прикрепите изображение
-                                    </h6>
-                                    <br>
-                                    <div class="alert alert-warning d-none mb1"><small
-                                            class="attachments-error"></small></div>
-                                    <div class="custom-file">
-                                        <input type="file" name="attachment[]" class="custom-file-input"
-                                               id="customFile1">
-                                        <label class="custom-file-label" for="customFile1" style="
-                                    float: left;
-                                font-family: Intro Regular, sans-serif;
-                                font-style: normal;
-                                font-weight: normal;
-                                font-size: 15px;
-                                line-height: 15px;
-                                display: flex;
-                                align-items: flex-end;">Выберите
-                                            файл...</label>
-                                        <div class="invalid-feedback"></div>
-                                    </div>
-                                </div>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <a href="javascript:PopUpHide()" style="
-
-
-    font-family: Intro Regular, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 20px;
-    display: flex;
-    align-items: flex-end;
-color: #595959">Готово</a>
-                            </div>
+                <div class="skillPlace">
+                    <div class="skillCont">
+                        <div class="col-1-2">
+                            <h6 class="skillTxt"><br>Мои навыки:</h6>
                         </div>
+                        <button type="button" data-toggle="modal" data-target="#exampleModal"
+                                style="position: relative; float: right; width: 11%; height: 11%;padding: 11px ">
+                            <svg class="bi bi-plus" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg" style="color: #595959; float:right;">
+                                <path fill-rule="evenodd"
+                                      d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H4a.5.5 0 010-1h3.5V4a.5.5 0 01.5-.5z"
+                                      clip-rule="evenodd"/>
+                                <path fill-rule="evenodd"
+                                      d="M7.5 8a.5.5 0 01.5-.5h4a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V8z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        {#                        <div class="b-popup" id="popup1">#}
+                        {#                            <div class="b-popup-content">#}
+                        {#                                <h6 style="#}
+                        {#                                    font-family: Intro Regular, sans-serif;#}
+                        {#                                    font-style: normal;#}
+                        {#                                    font-weight: normal;#}
+                        {#                                    font-size: 20px;#}
+                        {#                                    line-height: 20px;#}
+                        {#                                    display: flex;#}
+                        {#                                    align-items: flex-end;">Спорт</h6>#}
+                        {#                                <div style="float: left; height: 20%; width: 50%; overflow: auto">#}
+                        {#                                    <input type="checkbox" class="sa" value="sp1">академическая гребля<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp2">бадминтон<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp3">баскетбол<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp4">биатлон<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp5">водное поло<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp6">волейбол<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp7">единоборства<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp8">киберспорт<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp9">легкая атлетика<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp10">мини-футбол<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp11">настольный теннис<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp12">плавание<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp13">спортивная гимнастика<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp14">теннис<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp15">тяжелая атлетика<br><br>#}
+                        {#                                    <input type="checkbox" class="sa" value="sp16">другое<br><br>#}
+                        {#                                </div>#}
+                        {##}
+                        {#                                <div class="form-group attachments">#}
+                        {#                                    <h6 class="addPh">При необходимости прикрепите изображение#}
+                        {#                                    </h6>#}
+                        {#                                    <br>#}
+                        {#                                    <div class="alert alert-warning d-none mb1"><small#}
+                        {#                                            class="attachments-error"></small></div>#}
+                        {#                                    <div class="custom-file">#}
+                        {#                                        <input type="file" name="attachment[]" class="custom-file-input"#}
+                        {#                                               id="customFile1">#}
+                        {#                                        <label class="custom-file-label" for="customFile1" style="#}
+                        {#                                    float: left;#}
+                        {#                                font-family: Intro Regular, sans-serif;#}
+                        {#                                font-style: normal;#}
+                        {#                                font-weight: normal;#}
+                        {#                                font-size: 15px;#}
+                        {#                                line-height: 15px;#}
+                        {#                                display: flex;#}
+                        {#                                align-items: flex-end;">Выберите#}
+                        {#                                            файл...</label>#}
+                        {#                                        <div class="invalid-feedback"></div>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {##}
+                        {#                                <h6 style="#}
+                        {#                                font-family: Intro Regular, sans-serif;#}
+                        {#                                font-style: normal;#}
+                        {#                                font-weight: normal;#}
+                        {#                                font-size: 20px;#}
+                        {#                                line-height: 20px;#}
+                        {#                                display: flex;#}
+                        {#                                align-items: flex-end;">Творчество</h6>#}
+                        {#                                <div style="float: left; height: 85px; width: 300px; overflow-y: scroll">#}
+                        {#                                    <form actio="#" id="auth" method="post">#}
+                        {#                                        <input type="checkbox" class="sa" form="auth" value="art1">танцы<br><br>#}
+                        {#                                        <input type="checkbox" class="sa" form="auth" value="art2">рисование<br><br>#}
+                        {#                                        <input type="checkbox" class="sa" value="art3">пение<br><br>#}
+                        {#                                        <input type="checkbox" class="sa" value="art4">игра на музыкальных#}
+                        {#                                        инструментах<br><br>#}
+                        {#                                        <input type="checkbox" class="sa" value="art5">сценическая речь<br><br>#}
+                        {#                                        <input type="checkbox" class="sa" value="art6">фотография<br><br>#}
+                        {#                                        <input type="checkbox" class="sa" value="art7">другое<br><br>#}
+                        {#                                    </form>#}
+                        {#                                </div>#}
+                        {##}
+                        {#                                <div class="form-group attachments">#}
+                        {#                                    <h6 style="#}
+                        {#                                    float: left;#}
+                        {#                                font-family: Intro Regular, sans-serif;#}
+                        {#                                font-style: normal;#}
+                        {#                                font-weight: normal;#}
+                        {#                                font-size: 15px;#}
+                        {#                                line-height: 15px;#}
+                        {#                                display: flex;#}
+                        {#                                align-items: flex-end;">При необходимости прикрепите изображение#}
+                        {#                                    </h6>#}
+                        {#                                    <br>#}
+                        {#                                    <div class="alert alert-warning d-none mb1"><small#}
+                        {#                                            class="attachments-error"></small></div>#}
+                        {#                                    <div class="custom-file">#}
+                        {#                                        <input type="file" name="attachment[]" class="custom-file-input"#}
+                        {#                                               id="customFile1">#}
+                        {#                                        <label class="custom-file-label" for="customFile1" style="#}
+                        {#                                    float: left;#}
+                        {#                                font-family: Intro Regular, sans-serif;#}
+                        {#                                font-style: normal;#}
+                        {#                                font-weight: normal;#}
+                        {#                                font-size: 15px;#}
+                        {#                                line-height: 15px;#}
+                        {#                                display: flex;#}
+                        {#                                align-items: flex-end;">Выберите#}
+                        {#                                            файл...</label>#}
+                        {#                                        <div class="invalid-feedback"></div>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                                <a href="javascript:PopUpHide()" style="#}
+                        {##}
+                        {##}
+                        {#    font-family: Intro Regular, sans-serif;#}
+                        {#    font-style: normal;#}
+                        {#    font-weight: normal;#}
+                        {#    font-size: 20px;#}
+                        {#    line-height: 20px;#}
+                        {#    display: flex;#}
+                        {#    align-items: flex-end;#}
+                        {#color: #595959">Готово</a>#}
+                        {#                            </div>#}
+                        {#                        </div>#}
                     </div>
                 </div>
-                <div style="    position: fixed;
-                width: 350px;
-                height: 80px;
-                left: 46.5%;
-                top: 410px;
-                background: #F9F8F8;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-                border-radius: 20px">
-                    <h6 style="
-                            width: 110px;
-                            height: 30px;
-                            left: 15px;
-                            font-family: Intro Bold,sans-serif;
-                            font-style: normal;
-                            font-weight: bold;
-                            font-size: 15px;
-                            line-height: 15px;
-                            {#display: flex;#}
-                            {#align-items: flex-end;#}
-                            text-align: right;
-                            color: #595959;"><br>Мои баллы:</h6>
-                    <div clas="skillCont" style=" z-index:1;
-                   position: fixed;
-                width: 319px;
-                height: 45px;
-                left: 47.5%;
-                top: 440px;
-                background: #F9F8F8;
-                 font-family: Intro Bold,sans-serif;
-                                font-style: normal;
-                                font-weight: bold;
-                                font-size: 32px;
-                                line-height: 32px;
-
-                                text-align: center;
-                                color: orangered;">
-                        25
+                <br>
+                <div class="pointsPlace">
+                    <div class="pointsCont">
+                        <h6 class="pointsTxt"><br>Moи баллы:</h6>
                     </div>
-                    <div style="z-index: 1;
-                       position: fixed;
-                width: 350px;
-                height: 50px;
-                left: 46.5%;
-                top: 501px;
-                background: #F9F8F8;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-                border-radius: 20px">
-                        <div class="col-1-2">
-                            <h6 style="
-                                    width: 110px;
-                                    height: 30px;
-                                    left: 15px;
-                                    font-family: Intro Bold,sans-serif;
-                                    font-style: normal;
-                                    font-weight: bold;
-                                    font-size: 15px;
-                                    line-height: 15px;
-                                    {#display: flex;#}
-                                    {#align-items: flex-end;#}
-                                    text-align: center;
-                                    color: #595959;"><br>Соцсети:</h6>
+                </div>
+
+                <br>
+                <div class="NSPlace">
+                    <div class="NSCont">
+                        <h6 class="NSTxt"><br>Соцсети:</h6>
+                        <div class="NSBtn">
+                            <a href="" class="inst">
+                                <img src="../static/img/inst.png" alt="">
+                            </a>
+                            <a href="" class="twit">
+                                <img src="../static/img/twit.png" alt="" style="width: 26px; height: 26px">
+                            </a>
+                            <a href="" class="vk">
+                                <img src="../static/img/vk.png" alt="" style="width: 26px; height: 26px">
+                            </a>
                         </div>
-                        <a href="" style=" z-index: 2;position: fixed;
-    width: 26px;
-    height: 26px;
-    float:left;
-    left: 780px;
-    top: 515px;">
-                            <img src="../static/img/inst.png" alt="" style="width: 26px; height: 26px">
-                        </a>
-                        <a href="" style=" z-index: 2;position: fixed;
-    width: 26px;
-    height: 26px;
-    float:left;
-    left: 820px;
-    top: 515px;">
-                            <img src="../static/img/twit.png" alt="" style="width: 26px; height: 26px">
-                        </a>
-                        <a href="" style=" z-index: 2;position: fixed;
-    width: 26px;
-    height: 26px;
-    float:left;
-    left: 860px;
-    top: 515px;">
-                            <img src="../static/img/vk.png" alt="" style="width: 26px; height: 26px">
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 {% endblock %}

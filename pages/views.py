@@ -11,6 +11,3 @@ def login_1(request):
 
 def profile(request):
     return render(request, "profile.html", {})
-
-
-

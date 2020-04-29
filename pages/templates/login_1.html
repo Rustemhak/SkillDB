@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block page_content %}
-    <link rel="stylesheet" href="../static/style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/first_style.css' %}">
     <title>SkillDB</title>
 
     <div class="login-1">
