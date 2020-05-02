@@ -1,1 +1,6 @@
-
+Изменения:
+  -forms.py
+  -urls.py
+  -style.css
+  -login.html(44)
+  +добавлены новые шаблоны
