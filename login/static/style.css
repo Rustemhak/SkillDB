@@ -1,18 +1,26 @@
 html, body{
     height: 100%;
     max-height: 100%;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .general-container{
-    height: 100%;
     background-color: #F9F8F8;
 }
 .btn{
     text-align-last: center;
 }
 .cont{
+    height: 100%;
      background-color: #F9F8F8;
 }
-.register{
-    margin-top: 20px;
+.text-center{
+     background-color: #F9F8F8;
+}
+.control1{
+    padding-top: 10px;
+}
+.form-group{
+     background-color: #F9F8F8;
 }
