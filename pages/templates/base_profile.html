@@ -1,41 +1,44 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% extends "base.html" %}
 
-<link rel="stylesheet" href="../static/css/profile.css">
-<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-<script>
-    $(document).ready(function () {
-        //Скрыть PopUp при загрузке страницы
-        PopUpHide();
-    });
 
-    //Функция отображения PopUp
-    function PopUpShow() {
-        $("#popup1").show();
-    }
-
-    //Функция скрытия PopUp
-    function PopUpHide() {
-        $("#popup1").hide();
-    }
-</script>
 <title>SkillDB</title>
-
-<div class="menu">
-    <h1 class="mainText">SkillDB</h1>
-    <a href="profile" type="button" class="profileButton">Профиль</a>
-    <a href="" type="button" class="eventsButton">Мероприятия</a>
-    <a href="" type="button" class="organizersButton">Огранизаторы</a>
-    <a href="" type="button" class="developersButton">О разработчиках</a>
-    <a href="/" type="button" class="exitButton">Выйти
-        <img src="../static/img/door.png" alt=" ">
-    </a>
-</div>
-
 
 
 {% block page_content %}
+    <div class="col-md-5 menu">
+        <br>
+        <br>
+        <div class="col-10 offset-1">
+            <h1 class="mainText">SkillDB</h1>
+        </div>
+        <br>
+        <br>
+        <div class="col-10 offset-1">
+            <a href="#" class="menuButton">Профиль</a>
+        </div>
+        <div class="col-10 offset-1">
+            <a href="#" class="menuButton">Мероприятия</a>
+        </div>
+        <div class="col-10 offset-1">
+            <a href="#" class="menuButton">Студенты</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="col-10 offset-1">
+            <a href="#" class="menuButton">О разработчиках</a>
+        </div>
+        <div class="col-10 offset-1">
+            <a href="#" class="menuButton">Выйти
+                <img src="../static/img/door.png" alt=" "></a>
+        </div>
+    </div>
+    <div class="col-md-7">
+        {% block rightarea %}
 
+        {% endblock %}
+    </div>
 {% endblock %}
 
 

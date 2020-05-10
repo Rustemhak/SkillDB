@@ -1,35 +1,62 @@
-{% extends "base.html" %}
+{% extends "base_login.html" %}
 {% block page_content %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/first_style.css' %}">
     <title>SkillDB</title>
 
-    <div class="login-1">
-        <body>
-        <div class="container">
+    <div class="container-fluid">
+        <br>
+        <div class="col-12 offset-3">
             <header class="title1">Хочешь активно участвовать в жизни университета?</header>
-            <div class="row">
-                <div class="col-1-2"><h6 class="text1">1. Запишись помощником</h6></div>
-                <div class="col-1-2"><img class="img1" src="../static/img/page1.png" alt=""></div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <br>
+            <div class="col-6-1">
+                <h6 class="text">1. Запишись помощником</h6>
             </div>
-            <div class="row">
-                <div class="col-1-2"><h6 class="text2">2. Выполняй поручения</h6></div>
-                <div class="col-1-2"><img class="img2" src="../static/img/page2.png" alt=""></div>
+            <div class="col-6-2">
+                <div class="col-6 offset-3">
+                    <img class="img" src="../static/img/page1.png" alt="">
+                </div>
             </div>
-            <div class="row">
-                <div class="col-1-2"><h6 class="text3">3. Найди друзей и получи новый опыт</h6></div>
-                <div class="col-1-2"><img class="img3" src="../static/img/page3.png" alt=""></div>
+            <br>
+            <div class="col-6-1">
+                <div class="col-6 offset-3">
+                    <img class="img" src="../static/img/page2.png" alt="">
+                </div>
             </div>
-            <div class="row">
-                <div class="col-1-2"><h6 class="text4">4. Получай мерч и дополнительные баллы</h6></div>
-                <div class="col-1-2"><img class="img4" src="../static/img/page4.png" alt=""></div>
+            <div class="col-6-2"><h6 class="text">2. Выполняй поручения</h6>
             </div>
-            <footer>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-6-1">
+                <h6 class="text">3. Найди друзей и получи новый опыт</h6>
+            </div>
+            <div class="col-6-2">
+                <div class="col-6 offset-3">
+                    <img class="img" src="../static/img/page3.png" alt="">
+                </div>
+            </div>
+            <br>
+            <div class="col-6-1">
+                <div class="col-6 offset-3">
+                    <img class="img" src="../static/img/page4.png" alt="">
+                </div>
+            </div>
+            <div class="col-6-2">
+                <h6 class="text">4. Получай мерч и дополнительные баллы</h6>
+            </div>
+        </div>
+        <footer>
+            <div class="col-12 offset-5">
                 <a class="btn btn-primary" href="profile">
                     Войти
                 </a>
-            </footer>
-        </div>
-        </body>
+            </div>
+        </footer>
     </div>
+
 {% endblock %}
