@@ -11,3 +11,7 @@ def login_1(request):
 
 def profile(request):
     return render(request, "profile.html", {})
+
+
+def dev(request):
+    return render(request, "dev.html", {})

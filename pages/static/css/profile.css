@@ -250,7 +250,7 @@
 .row {
     height: 100%;
     width: 100%;
-    background-color: #0085EB;
+    /*background-color: #0085EB;*/
     margin-right: 0;
     margin-left: 0;
 }
@@ -314,5 +314,60 @@
     font-weight: normal;
     font-size: 24px;
     line-height: 24px;
+}
 
+.thx {
+    width: auto;
+    height: auto;
+    font-family: Intro Regular, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: large;
+    text-align: center;
+    line-height: normal;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    color: #595959;
+}
+
+.devCont {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background: #F9F8F8;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+}
+
+.col-5 {
+    height: 21%;
+}
+
+.role {
+    padding-top: 5%;
+    height: 36px;
+    font-family: Intro Regular, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: normal;
+    text-align: center;
+    color: #595959;
+}
+
+.devName {
+    height: 13%;
+    font-family: Intro Regular, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: normal;
+    text-align: center;
+}
+
+.inf {
+    float: right;
+    margin-top: 2%;
+    margin-right: 5%;
 }
