@@ -26,22 +26,12 @@
                                                             display: flex;
                                                             align-items: flex-end;">Спорт</h6>
                     <div style="float: left; height: 160px; width: 50%; overflow-y:scroll">
-                        <input type="checkbox" class="sa" value="sp1">академическая гребля<br><br>
-                        <input type="checkbox" class="sa" value="sp2">бадминтон<br><br>
-                        <input type="checkbox" class="sa" value="sp3">баскетбол<br><br>
-                        <input type="checkbox" class="sa" value="sp4">биатлон<br><br>
-                        <input type="checkbox" class="sa" value="sp5">водное поло<br><br>
-                        <input type="checkbox" class="sa" value="sp6">волейбол<br><br>
-                        <input type="checkbox" class="sa" value="sp7">единоборства<br><br>
-                        <input type="checkbox" class="sa" value="sp8">киберспорт<br><br>
-                        <input type="checkbox" class="sa" value="sp9">легкая атлетика<br><br>
-                        <input type="checkbox" class="sa" value="sp10">мини-футбол<br><br>
-                        <input type="checkbox" class="sa" value="sp11">настольный теннис<br><br>
-                        <input type="checkbox" class="sa" value="sp12">плавание<br><br>
-                        <input type="checkbox" class="sa" value="sp13">спортивная гимнастика<br><br>
-                        <input type="checkbox" class="sa" value="sp14">теннис<br><br>
-                        <input type="checkbox" class="sa" value="sp15">тяжелая атлетика<br><br>
-                        <input type="checkbox" class="sa" value="sp16">другое<br><br>
+                        <form method="post">
+                            {% csrf_token %}
+                            {% for sk in sskills %}
+                                <input type="checkbox" name="s1" class="sa" value={{ sk.name }}>{{ sk.name }}<br><br>
+                            {% endfor %}
+                        </form>
                     </div>
                     <br>
                     <br>
@@ -125,7 +115,7 @@
                             align-items: flex-end;"
                     >Закрыть
                     </button>
-                    <button type="button" class="btn btn-primary" style="
+                    <button type="button" formmethod="post" class="btn btn-primary" data-dismiss="modal" style="
                                                             float: left;
                                                         font-family: Intro Regular, sans-serif;
                                                         font-style: normal;
@@ -143,15 +133,15 @@
         <div class="whitePlace">
             <div class="col-6 offset-md-3">
                 <br>
-                <img src="../static/img/image.png" style="  width: 150px;
+                <img src="../static/img/Dima.png" style="  width: 150px;
                     height: 150px;margin-left: auto;margin-right: auto" alt="">
             </div>
             <br>
             <div class="col-6 offset-md-3">
-                <h6 class="name">Мария Иванова</h6>
+                <h6 class="name">Дмитрий Герасимов</h6>
                 <h6 class="name">ВШ ИТИС 11-905</h6>
                 <!--#if expr="условие1" -->
-                <h6 class="student">кто-то важный</h6>
+                <h6 class="student"></h6>
                 <!--#endif -->
             </div>
             <div class="col-md-auto">
@@ -168,7 +158,9 @@
                     <br>
                     <div class="col-12">
                         <br>
-                        ...
+                        {% for skill in skill %}
+                            {{ skill.name }}
+                        {% endfor %}
                     </div>
 
                 </div>
@@ -205,7 +197,7 @@
                         <a href="">
                             <img src="../static/img/twit.png" alt="" style="width: 27px; height: 27px">
                         </a>
-                        <a href="">
+                        <a href="https://vk.com/id252004824">
                             <img src="../static/img/vk.png" alt="" style="width: 27px; height: 27px">
                         </a>
                     </div>
