@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.template import context
 
 from main.models import Event
 
@@ -28,3 +29,7 @@ def single(request, id=None):
     }
 
     return render(request, 'main/event_info.html', context)
+
+
+def join(request):
+    return render(request, 'main/join.html')

@@ -10,6 +10,8 @@ class Event(models.Model):
     comments = models.TextField()
     visible = models.BooleanField(default=1)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
+    background_image = models.ImageField(null=True, blank=True)
+    emoji_image = models.ImageField(null=True, blank=True)
 
     def __unicode__(self):
         return self.title
