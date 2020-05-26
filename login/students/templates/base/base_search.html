@@ -1,0 +1,56 @@
+{% extends "base/base2.html" %}
+{% load static %}
+<html lang="en">
+<head>
+<title>SkillDB</title>
+</head>
+<body>
+{% block page_content %}
+    <div class="col-md-5 menu">
+        <br>
+        <br>
+        <div class="col-10 offset-1">
+            <h1 class="mainText">SkillDB</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="col-10 offset-1">
+            <a href="#" class="prStExBtn">Профиль</a>
+        </div>
+        <div class="col-10 offset-1">
+            <a href="#" class="orgBtn">Мероприятия</a>
+        </div>
+        <div class="col-10 offset-1">
+            <a href="#" class="prStExBtn">Студенты</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="col-10 offset-1">
+            <a href="#" class="devBtn">О разработчиках</a>
+        </div>
+        <div class="col-10 offset-1">
+            <a href="#" class="prStExBtn">Выйти
+            <img src="{% static 'img/door (1).png' %}" alt=''></a>
+        </div>
+    </div>
+    <div class="col-md-7">
+        {% block rightarea %}
+
+        {% endblock %}
+    </div>
+{% endblock %}
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>

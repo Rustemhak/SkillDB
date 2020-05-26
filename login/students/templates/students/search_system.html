@@ -1,0 +1,133 @@
+{% extends "base/base_search.html" %}
+{% load static %}
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static '/style_search.css' %}">
+</head>
+<body>
+{% block rightarea %}
+    <form action="{% url 'search' %}" method="get">
+        <div class="col-9">
+            <div class="whitePlace">
+                <div class="row">
+
+                    <div class="col-12" style="height: auto;">
+                        <button type="button" class="btn btn-lg btn-primary" style="color: white;margin-top: 60px"
+                                data-toggle="modal"
+                                data-target="#gridSystemModal">Поиск студентов
+                        </button>
+
+                        <div class="col-6 offset-md-3">
+
+                            <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog"
+                                 aria-labelledby="gridModalLabel" aria-hidden="true"
+                                 style="margin-left:192px;margin-top:76px">
+
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <input type="search" name="q" class="form-control" placeholder="Поиск..."/>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <select class="form-control">
+                                                    <option selected>Деятельность</option>
+                                                    <option>Организаторы</option>
+                                                    <option>Профорг</option>
+                                                    <option>Культорг</option>
+                                                    <option>Соцорг</option>
+                                                    <option>Спорторг</option>
+                                                    <option>Научорг</option>
+                                                    <option>Инфорг</option>
+                                                    <option>Волонтеры</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control">
+                                                    <option selected>Курсы</option>
+                                                    <option>1-ый курс</option>
+                                                    <option>2-ой курс</option>
+                                                    <option>3-ий курс</option>
+                                                    <option>4-ый курс</option>
+                                                    <option>5-ый курс</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="date"
+                                                       id="date" name="date" class="form-control"
+                                                       placeholder="Дата рождения...">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-control"
+                                                       placeholder="Введите вашу группу. Пример: 11-916" maxlength="6"/>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close
+                                            </button>
+                                            <button type="submit" class="btn btn-primary">Поиск</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+
+                    {% for search in search_obj %}
+                        <div class="col-5">
+                            <div class="devCont">
+                                <div class="role">
+                                    <p>
+                                        {{ search.area }} <a href="#"><img src="{% static 'img/inf.png' %}"
+                                                                           style="width: 15px; height: 15px"></a>
+                                    </p>
+                                </div>
+                                <div style="height: 3%"></div>
+                                <div class="col-12 " style="height: 50%">
+                                    <img src="{% static 'img/Dima.png' %}" style="height: 100%">
+                                </div>
+                                <div style="height: 6%"></div>
+                                <h6 class="devName">
+                                    {{ search.name }} {{ search.surname }}
+                                </h6>
+
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}
+</body>
+</html>
+
